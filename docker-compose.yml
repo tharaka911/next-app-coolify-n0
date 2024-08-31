@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  app-blue:
+    build: .
+    container_name: nextjs-app-blue
+    ports:
+      - "8080:3000"
+    environment:
+      - ENVIRONMENT=blue
+
+  app-green:
+    build: .
+    container_name: nextjs-app-green
+    ports:
+      - "8081:3000"
+    environment:
+      - ENVIRONMENT=green
